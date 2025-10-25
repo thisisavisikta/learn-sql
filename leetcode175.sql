@@ -4,16 +4,16 @@ SELECT
     Address.city, 
     Address.state
 FROM 
-    Person 
+    Person       --left table
 LEFT JOIN 
-    Address 
+    Address      --right table
 ON 
     Person.personId = Address.personId;
 
 
 
 
--- A LEFT JOIN is used to combine rows from two tables. It returns all rows from the left table, and the matching rows from the right table. 
+-- A LEFT JOIN is used to combine rows from two tables. It returns all rows from the left(first) table, and the matching rows from the right(second) table. 
 -- If there is no match, the result will contain NULL for columns from the right table. LEFT JOIN is not an INNER JOIN. Inner join only shows matched rows.
 -- LEFT JOIN shows all from the left, matched or not.
 
